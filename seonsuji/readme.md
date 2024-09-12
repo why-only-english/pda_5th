@@ -84,6 +84,11 @@ print('테스트 정확도:', test_acc)
 
 <br>   
 
+![image](https://github.com/user-attachments/assets/59260e96-ca45-4be5-97b5-bb25ac4bca62)
+
+<br>
+
+
 ## 가장 선호하는 인스턴스 유형
 권지언 :
 곽수지 :
