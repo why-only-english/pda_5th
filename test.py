@@ -6,6 +6,7 @@ import requests
 import time
 import psutil
 import math 
+import os
 
 """
 종목 10개 현재 주가 크롤링하는 
@@ -76,8 +77,8 @@ def start(limit):
         max_cpu_usage = max(max_cpu_usage, cpu_usage)
     
     end_time = time.time()
-    print(f"소수찾기 최대 CPU 사용량: {max_cpu_usage:.2f}%")
-    print(f"소요 시간: {end_time - start_time:.2f} 초")
+    print(f"소수찾기 최대 CPU 사용량: {max_cpu_usage:.5f}%")
+    print(f"소요 시간: {end_time - start_time:.5f} 초")
 
 primes = start(100000)
 
@@ -98,6 +99,13 @@ end_time = time.time()
 elapsed_time = end_time - start_time
 
 print(f"대량의 문자열을 파일에 저장하는데 걸린 시간: {elapsed_time:.5f} 초")
+
+# 파일 삭제
+if os.path.exists(file_path):
+    os.remove(file_path)
+    print(f"파일 {file_path}이(가) 삭제되었습니다.")
+else:
+    print(f"파일 {file_path}을(를) 찾을 수 없습니다.")
 
 size = 100_000_000  # 1억 개의 float 값을 할당
 
@@ -144,4 +152,4 @@ for user in users:
 
 # 평균 요청 시간 계산
 average_time = sum(times) / len(times)
-print(f"\n10명의 사용자에 대한 평균 요청 시간: {average_time:.5f} 초")
+print(f"10명의 사용자에 대한 평균 요청 시간: {average_time:.5f} 초")
