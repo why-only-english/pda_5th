@@ -78,7 +78,9 @@ print('테스트 정확도:', test_acc)
 | t4g.xlarge | 28.38 | 7.37 |
 | t4g.2xlarge | 22.76 | 7.03 |
 
-![image](https://github.com/user-attachments/assets/59260e96-ca45-4be5-97b5-bb25ac4bca62)
+![image](https://github.com/user-attachments/assets/e7538808-4e69-436b-a00c-59af9cb84e2b)
+
+<br>
 
 ## x86 vs ARM   
 
