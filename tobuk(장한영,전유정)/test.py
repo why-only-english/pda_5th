@@ -61,9 +61,6 @@ print(f"대량의 문자열을 파일에 저장하는데 걸린 시간: {elapsed
 # 파일 삭제
 if os.path.exists(file_path):
     os.remove(file_path)
-    print(f"파일 {file_path}이(가) 삭제되었습니다.")
-else:
-    print(f"파일 {file_path}을(를) 찾을 수 없습니다.")
 
 size = 100_000_000  # 1억 개의 float 값을 할당
 
@@ -111,3 +108,4 @@ for user in users:
 # 평균 요청 시간 계산
 average_time = sum(times) / len(times)
 print(f"10명의 사용자에 대한 평균 요청 시간: {average_time:.5f} 초")
+
