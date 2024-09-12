@@ -94,6 +94,10 @@ print('테스트 정확도:', test_acc)
 ## 인스턴스 크기 비교
 
 ## 옵션 비교
+![image](https://github.com/user-attachments/assets/a145c923-852f-467f-9ebe-46f9571c4286)
+
+<br>
+
 ![image](https://github.com/user-attachments/assets/fc5cefbf-a037-4f1b-8055-46aacc974f14)
 ### 소요 시간
 c6gn.medium이 가장 빠른 학습 시간(95.95초)을 기록했고, c6g.medium과 c6gd.medium의 소요 시간은 거의 비슷했습니다.
