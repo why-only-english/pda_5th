@@ -35,18 +35,18 @@
 | 인스턴스 크기 | vCPU | 메모리(GiB) | 인스턴스 스토리지(GB) |네트워크 대역폭(Gbps)** | 시간 당 요금 | CPU 아키텍처 |
 |---|---|---|---|---|---|---|
 |m5.large|2|8|EBS 전용|최대 10|USD 0.118| x86(64bit) |
-|m5.xlarge|4|8|EBS 전용|최대 10|USD 0.236| x86(64bit) |
-|m5.2xlarge|8|8|EBS 전용|최대 10|USD 0.472| x86(64bit) |
-|m5.4xlarge|16|8|EBS 전용|최대 10|USD 0.944| x86(64bit) |
+|m5.xlarge|4|16|EBS 전용|최대 10|USD 0.236| x86(64bit) |
+|m5.2xlarge|8|32|EBS 전용|최대 10|USD 0.472| x86(64bit) |
+|m5.4xlarge|16|64|EBS 전용|최대 10|USD 0.944| x86(64bit) |
 
 
 ## 📚 C5
 | 인스턴스 크기 | vCPU | 메모리(GiB) | 인스턴스 스토리지(GB) |네트워크 대역폭(Gbps)** | 시간 당 요금 | CPU 아키텍처 |
 |---|---|---|---|---|---|---|
-|c5.large|2|8|EBS 전용|최대 10|USD 0.096| x86(64bit) |
+|c5.large|2|4|EBS 전용|최대 10|USD 0.096| x86(64bit) |
 |c5.xlarge|4|8|EBS 전용|최대 10|USD 0.192| x86(64bit) |
-|c5.2xlarge|8|8|EBS 전용|최대 10|USD 0.384| x86(64bit) |
-|c5.4xlarge|16|8|EBS 전용|최대 10|USD 0.768| x86(64bit) |
+|c5.2xlarge|8|16|EBS 전용|최대 10|USD 0.384| x86(64bit) |
+|c5.4xlarge|16|32|EBS 전용|최대 10|USD 0.768| x86(64bit) |
 
 
 ## 1️⃣ CPU 연산 처리 속도 측정
