@@ -70,13 +70,13 @@ print('테스트 정확도:', test_acc)
 
 ## t4g
 
-| 인스턴스 유형 | 학습 소요 시간 | 
-| --- | --- |
-| t4g.small | 47.15 초 |
-| t4g.medium | 43.04 초 |
-| t4g.large | 43.55 초 |
-| t4g.xlarge | 28.38 초 |
-| t4g.2xlarge | 22.76 초 |
+| 인스턴스 유형 | 학습 소요 시간(초) | CPU 사용량(%) | 
+| --- | --- | --- | 
+| t4g.small | 47.15 | 14 |
+| t4g.medium | 43.04 | 13.8 |
+| t4g.large | 43.55 | 11.6 |
+| t4g.xlarge | 28.38 | 7.37 |
+| t4g.2xlarge | 22.76 | 7.03 |
 
 ![image](https://github.com/user-attachments/assets/59260e96-ca45-4be5-97b5-bb25ac4bca62)
 
