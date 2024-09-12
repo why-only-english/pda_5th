@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Git 브랜치 전환
-echo "Switching to 'tobuk' branch..."
-git switch tobuk
-
-# 작업 디렉토리 이동
-echo "Changing directory to 'pda_5th'..."
-cd pda_5th || { echo "Directory 'pda_5th' not found."; exit 1; }
 
 # 시스템 업데이트
 echo "Updating system..."
