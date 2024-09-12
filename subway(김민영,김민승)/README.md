@@ -34,7 +34,12 @@ memory_usage_end = psutil.Process().memory_info().rss / (1024 * 1024)  # MB
 # 결과 출력
 print(f"Model training time: {end_time - start_time:.2f} seconds")
 print(f"CPU usage: {cpu_usage_end - cpu_usage_start:.2f}%")
-print(f"Memory usage: {memory_usage_end - memor인스턴
+print(f"Memory usage: {memory_usage_end - memory_usage_start:.2f} MB")
+
+# 모델 평가
+score = model.score(X_test, y_test)
+print(f"Model accuracy: {score}")
+
 ```
 
 위 코드는 **랜덤 포레스트 모델**을 사용하여 학습을 수행한 뒤, **모델 훈련 성능**과 **자원 사용량**을 측정하는 코드입니다
@@ -61,6 +66,20 @@ print(f"Memory usage: {memory_usage_end - memor인스턴
 **분석**:
 
 인스턴스가 클수록 CPU 사용률이 감소하는 경향을 보입니다. `c6g.16xlarge`와 `m6g.16xlarge` 인스턴스는 `c6g.2xlarge` 및 `m6g.2xlarge`에 비해 더 많은 CPU 코어를 사용하기 때문에, CPU 사용률이 낮으면서도 빠른 성능을 발휘할 수 있습니다. `c6g.large`와 `m6g.large`의 CPU 사용률은 상대적으로 높습니다.
+
+### large 인스턴스에서 CPU 사용률이 2xlarge보다 낮게 측정된 이유:
+1. 작업 부하 및 데이터 크기의 불균형
+작업 부하가 인스턴스 크기에 비해 충분하지 않을 경우, 큰 인스턴스에서 CPU 자원을 덜 사용하게 됩니다. 
+예를 들어, 2xlarge 인스턴스는 더 많은 vCPU를 가지고 있으므로 병렬 처리를 활성화할 수 있지만, 
+데이터셋이 상대적으로 작다면 병렬 처리의 이점을 충분히 활용하지 못할 수 있습니다. 
+이로 인해 large 인스턴스에서는 효율적으로 자원을 사용하지만, 2xlarge에서는 오히려 더 많은 CPU 코어가 비효율적으로 동작하게 됩니다.
+
+2. 병렬 처리 비효율
+병렬 처리의 한계로 인해 발생할 수 있습니다. 
+랜덤 포레스트 모델은 n_jobs=-1로 모든 CPU 코어를 사용하도록 설정되었지만, 
+실제로 모든 코어가 효율적으로 사용되지 않았을 수 있습니다. 
+이는 특정 코어에 부하가 집중되거나, 데이터 분산이 제대로 이루어지지 않았을 경우 발생할 수 있는 상황입니다. 
+더 많은 코어를 가진 2xlarge에서 병렬 처리가 비효율적으로 이루어졌을 가능성도 있습니다.
 
 ### **Memory Usage (MB)**:
 
