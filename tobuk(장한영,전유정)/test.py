@@ -7,6 +7,7 @@ import time
 import psutil
 import math 
 import os
+import random
 
 """
 종목 10개 현재 주가 크롤링하는 
