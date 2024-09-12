@@ -150,5 +150,6 @@ c6gd,medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 
 만약, Arm 을 사용하고자 한다면 속도가 중요하다면 xlarge를 그렇지 않다면 small을 선택하는 것이 경제적일 것입니다.
 <br>
 - 비용
+  
+![image](https://github.com/user-attachments/assets/608ce5fa-fca7-4655-91aa-baeffab8fabd)
 
-![image](https://github.com/user-attachments/assets/99e38f51-e647-44c8-917a-18248a9f422e)
