@@ -41,48 +41,6 @@ average_time = sum(times) / len(times)
 print(f"\n10개의 종목에 대한 평균 크롤링 시간: {average_time:.5f} 초")
 
 """
-10만까지의 소수를 찾는 함수 
-cpu 점유율과 소요시간 
-"""
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-# 주어진 범위에서 소수 찾는 함수
-def find_primes(limit):
-    primes = []
-    for num in range(2, limit):
-        if is_prime(num):
-            primes.append(num)
-    return primes
-
-# CPU 사용량 측정 함수
-def monitor_cpu_usage(interval=0.1):
-    cpu_usage = psutil.cpu_percent(interval=interval)
-    return cpu_usage
-
-# 소수 판별을 하면서 최대 CPU 점유율 추적
-def start(limit):
-    max_cpu_usage = 0
-    start_time = time.time()
-    
-    # 소수 판별 수행
-    for i in range(0, limit, 1000):  # 범위를 나눠서 CPU 사용량을 모니터링
-        find_primes(i + 1000)  # 1000 단위로 소수 판별 수행
-        cpu_usage = monitor_cpu_usage()  # CPU 사용량 측정
-        max_cpu_usage = max(max_cpu_usage, cpu_usage)
-    
-    end_time = time.time()
-    print(f"소수찾기 최대 CPU 사용량: {max_cpu_usage:.5f}%")
-    print(f"소요 시간: {end_time - start_time:.5f} 초")
-
-primes = start(100000)
-
-"""
 대량의 문자열을 파일로 저장하는데 걸리는 시간 
 디스크 쓰기 속도 비교 
 """
