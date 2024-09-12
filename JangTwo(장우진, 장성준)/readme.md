@@ -46,7 +46,7 @@
 
 ### 결과 예측 및 가설
 
-- **CPU 성능 테스트**: c계열이 CPU 특화형이므로 반복된 연산에서 C6i 인스턴스가 높은 성능 결과 예상, Graviton2는 동급 대비 조금 더 나은 결과 예상
+- **CPU 성능 테스트**: c계열이 CPU 특화형이므로 반복된 연산에서 C6i 인스턴스가 높은 성능 결과 예상
 - **Memory I/O 테스트**: c계열이 CPU 중심이므로 메모리 성능에서는 다소 낮은 성능 결과 예상
 - **API 성능 테스트**: m 및 t 계열이 범용 인스턴스이므로 API 테스트에서 더 좋은 성능 결과 예상
 - Graviton 계열은 효율적인 전력 소비와 ARM 아키텍처 기반의 설계 특성으로 미루어보아 동일 스펙의 x86 계열보다 약 120% 더 나은 성능을 보일 것으로 예상됨.
@@ -148,11 +148,11 @@ if __name__ == "__main__":
 
 ### 그래프 분석
 
-### 평균 결과 비교
+### 각 인스턴스 별 처리 시간(ms) / API 처리 횟수(1회)
 
 <img width="1164" alt="image" src="https://github.com/user-attachments/assets/0ab89480-284b-4fb3-bc02-55b99290a1be">
 
-### 단위 비용당 성능
+### 단위 비용당 처리 시간  / 단위 비용당 응답 횟수
 
 <img width="1158" alt="image" src="https://github.com/user-attachments/assets/db4c51aa-6d38-495f-ba9a-fd77d1171be9">
 
