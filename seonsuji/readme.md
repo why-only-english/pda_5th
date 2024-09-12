@@ -122,6 +122,7 @@ c6gd,medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 
 ### X86(Intel) 과 Arm 의 차이
 - X86 : Instance의 크기가 커질수록 학습 속도가 빨랐다. <br>
 - Arm : small, medium, large / xlarge, 2xlarge 두 그룹 간에 유의미한 학습 속도 차이를 보였다. <br>
+
 두 종류의 아키텍트 중 X86의 학습 속도가 약간 더 빠른 경향을 보였다.
 
 <br>
