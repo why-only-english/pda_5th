@@ -26,8 +26,8 @@ def crawl_stock_price(url):
 for _ in range(1000):
     crawl_stock_price(stock_urls)
 
-average_time = sum(times) / len(times)
-print(f"\n10개의 종목에 대한 평균 크롤링 시간: {average_time:.5f} 초")
+average_time = sum(times) 
+print(f"\n1000개의 종목에 대한 크롤링 시간: {average_time:.5f} 초")
 
 """
 대량의 문자열을 파일로 저장하는데 걸리는 시간 
@@ -97,6 +97,6 @@ for i in range(100):
         fetch_github_user_data(user)
 
 # 평균 요청 시간 계산
-average_time = sum(times) / 1000
-print(f"10명의 사용자에 대한 평균 요청 시간: {average_time:.5f} 초")
+average_time = sum(times)
+print(f"1000명의 사용자에 프로필 api 시간: {average_time:.5f} 초")
 
