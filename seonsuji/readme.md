@@ -93,9 +93,14 @@ print('테스트 정확도:', test_acc)
 
 ## 인스턴스 크기 비교
 
-
 ## 옵션 비교
-
+![image](https://github.com/user-attachments/assets/fc5cefbf-a037-4f1b-8055-46aacc974f14)
+### 소요 시간
+c6gn.medium이 가장 빠른 학습 시간(95.95초)을 기록했고, c6g.medium과 c6gd.medium의 소요 시간은 거의 비슷했습니다.
+네트워크 성능이 강화된 c6gn 인스턴스가 소요 시간에 기여했음을 추측할 수 있습니다.
+### CPU 사용량 
+c6gd,medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 보였고, c6g.medium과 c6gn.medium의 CPU 사용률은 유사했습니다.
+고성능 스토리지를 가진 c6gd 인스턴스가 작업 중 CPU 부하를 적게 받았음을 추측할 수 있습니다.
 ## 가장 선호하는 인스턴스 유형
 권지언 :
 곽수지 :
