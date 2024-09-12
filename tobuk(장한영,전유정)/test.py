@@ -12,18 +12,7 @@ import os
 종목 10개 현재 주가 크롤링하는 
 걸리는 평균 시간 
 """
-stock_urls = [
-    "https://m.stock.naver.com/worldstock/stock/AAPL.O/total",   # 애플
-    "https://m.stock.naver.com/worldstock/stock/GOOGL.O/total",  # 구글
-    "https://m.stock.naver.com/worldstock/stock/AMZN.O/total",   # 아마존
-    "https://m.stock.naver.com/worldstock/stock/MSFT.O/total",   # 마이크로소프트
-    "https://m.stock.naver.com/worldstock/stock/TSLA.O/total",   # 테슬라
-    "https://m.stock.naver.com/worldstock/stock/FB.O/total",     # 페이스북 (메타)
-    "https://m.stock.naver.com/worldstock/stock/NFLX.O/total",   # 넷플릭스
-    "https://m.stock.naver.com/worldstock/stock/NVDA.O/total",   # 엔비디아
-    "https://m.stock.naver.com/worldstock/stock/BRK.B/total",    # 버크셔 해서웨이
-    "https://m.stock.naver.com/worldstock/stock/V.O/total"       # 비자
-]
+stock_urls = "https://m.stock.naver.com/worldstock/stock/AAPL.O/total"   # 애플
 times = []
 
 def crawl_stock_price(url):
@@ -34,8 +23,8 @@ def crawl_stock_price(url):
     elapsed_time = end_time - start_time
     times.append(elapsed_time)
 
-for url in stock_urls:
-    crawl_stock_price(url)
+for _ in range(1000):
+    crawl_stock_price(stock_urls)
 
 average_time = sum(times) / len(times)
 print(f"\n10개의 종목에 대한 평균 크롤링 시간: {average_time:.5f} 초")
@@ -102,10 +91,12 @@ def fetch_github_user_data(username):
     times.append(elapsed_time)
 
 # 여러 사용자에 대한 요청 수행
-for user in users:
-    fetch_github_user_data(user)
+
+for i in range(100):
+    for user in users:
+        fetch_github_user_data(user)
 
 # 평균 요청 시간 계산
-average_time = sum(times) / len(times)
+average_time = sum(times) / 1000
 print(f"10명의 사용자에 대한 평균 요청 시간: {average_time:.5f} 초")
 
