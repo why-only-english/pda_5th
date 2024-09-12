@@ -1,5 +1,7 @@
 # aws 인스턴스 성능비교
 
+### Code
+
 ```python
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
@@ -41,13 +43,13 @@ print(f"Memory usage: {memory_usage_end - memor인스턴
 
 ### <인스턴스별 성능분석>
 
-<img src="./images/결과값_표.png"  width="400" height="300">
+<img src="./images/결과값_표.png"  width="500" height="300">
 
 ### 1. **Ubuntu 인스턴스 분석**
 
 ### **CPU Usage (%)**:
 
-<img src="./images/CPU 사용률.png"  width="400" height="300">
+<img src="./images/CPU 사용률.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 27.2%
 - **c6g.2xlarge**: 75.76%
@@ -62,7 +64,7 @@ print(f"Memory usage: {memory_usage_end - memor인스턴
 
 ### **Memory Usage (MB)**:
 
-<img src="./images/메모리사용량.png"  width="400" height="300">
+<img src="./images/메모리사용량.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 91.004 MB
 - **c6g.2xlarge**: 72.606 MB
@@ -77,7 +79,7 @@ print(f"Memory usage: {memory_usage_end - memor인스턴
 
 ### **Training Time (seconds)**:
 
-<img src="./images/시간그래프.png"  width="400" height="300">
+<img src="./images/시간그래프.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 1.25초
 - **c6g.2xlarge**: 2.698초
@@ -109,7 +111,7 @@ print(f"Memory usage: {memory_usage_end - memor인스턴
 
 ### **CPU Usage (%)**:
 
-<img src="./images/CPU 사용률.png"  width="400" height="300">
+<img src="./images/CPU 사용률.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 18.66%
 - **c6g.2xlarge**: 69.18%
@@ -128,7 +130,7 @@ Ubuntu와 마찬가지로 **큰 인스턴스일수록 CPU 사용률이 감소**�
 
 ### **Memory Usage (MB)**:
 
-<img src="./images/메모리사용량.png"  width="400" height="300">
+<img src="./images/메모리사용량.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 105.058 MB
 - **c6g.2xlarge**: 72.594 MB
@@ -147,7 +149,7 @@ Linux에서의 메모리 사용량도 Ubuntu와 유사한 경향을 보이며, �
 
 ### **Training Time (seconds)**:
 
-<img src="./images/시간그래프.png"  width="400" height="300">
+<img src="./images/시간그래프.png"  width="500" height="350">
 
 - **c6g.16xlarge**: 1.016초
 - **c6g.2xlarge**: 2.764초
