@@ -1,19 +1,17 @@
 # Team Seongsuji
 
-커밋 수정함
+### 목적
+AWS EC2 인스턴스의 성능을 아키텍처(x86 vs ARM), 옵션, 인스턴스 크기에 따라 비교하여, 머신러닝 작업에 최적화된 인스턴스 유형을 찾는 것이 목표입니다. 이를 통해 성능과 비용 효율성을 분석합니다.
 
-## 측정할 지표
+### 비교 항목
+1.	x86 vs ARM 아키텍처
+2.	인스턴스 크기 비교
+3.	옵션 비교
+
+### 성능 지표
 1. CPU 사용량
-2.	Machine learning 코드의 실행 시간 (학습 소요 시간)
+2. Machine learning 코드의 실행 시간 (학습 소요 시간)
 
-## EC2 인스턴스
--	CPU, 메모리, 네트워크 스토리지 같은 하드웨어 사양
--	네트워킹 위치, 방화벽 규칙, 인증, 운영 체제 같은 논리적 구성
-
-## 인스턴스 종류
-1.	C-CPU vs G-GPU
-2.	비용과 용량의 차이 t4g.small t4g.xlarge
-3.	추가기능의 유무 c6g.medium c6gd.medium c6gm.medium
 
 ## Code Block   
 ### Model
@@ -68,10 +66,9 @@ print('테스트 정확도:', test_acc)
 
 ```
 
-<br>   
+<br> 
 
-## Table   
-
+## t4g
 
 | 인스턴스 유형 | 학습 소요 시간 | 
 | --- | --- |
@@ -81,18 +78,19 @@ print('테스트 정확도:', test_acc)
 | t4g.xlarge | 28.38 초 |
 | t4g.2xlarge | 22.76 초 |
 
-
-<br>   
-
 ![image](https://github.com/user-attachments/assets/59260e96-ca45-4be5-97b5-bb25ac4bca62)
 
-<br>
+## x86 vs ARM   
 
+<br> 
+
+## 인스턴스 크기 비교
+
+
+## 옵션 비교
 
 ## 가장 선호하는 인스턴스 유형
 권지언 :
 곽수지 :
 곽성은 :
-
-
 
