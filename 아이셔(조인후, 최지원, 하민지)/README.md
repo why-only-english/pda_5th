@@ -134,8 +134,11 @@ H1: 인스턴스 크기가 커질수록 코드 실행 시간이 줄어들 것이
 | t4g.xlarge | 12.197164 | 12.175627 | 12.1864 |
 | t4g.2xlarge | 12.580108 | 12.147315 | 12.36371 |
 
+![image](https://github.com/user-attachments/assets/7d242339-a7c6-46f3-95a7-4be068a2c30b)
+
 
 인스턴스 크기가 커질수록 코드 실행 시간이 줄어들 것이라 생각했으나 눈에 띄는 차이는 보이지 않았다.
+
 <br/>
 
 **2.1.4. CPU 사용률 측정 결과**
@@ -149,7 +152,6 @@ H1: 인스턴스 크기가 커질수록 코드 실행 시간이 줄어들 것이
 | t4g.xlarge | 1.4509 |
 | t4g.2xlarge | 0.67699 |
 
-![image](https://github.com/user-attachments/assets/7d242339-a7c6-46f3-95a7-4be068a2c30b)
 
 <br/>
 
