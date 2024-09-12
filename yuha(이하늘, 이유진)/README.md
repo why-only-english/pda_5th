@@ -82,7 +82,7 @@ export default function () {
     **t2.small**이 **t2.micro**보다 성능이 크게 개선된 이유는, 같은 1 vCPU를 사용하지만 2GB의 메모리를 제공하여 더 많은 요청을 효율적으로 처리할 수 있기 때문이다.
   
       
-![Example Image](spiketest_result.png)
+![Example Image](image.png)
 
 ### 테스트 실행 시 한계 
 - EC2 중단시 테스트 불가
