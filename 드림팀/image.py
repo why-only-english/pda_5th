@@ -2,6 +2,7 @@ from PIL import Image, ImageSequence
 import io
 import time
 import os
+import psutil
 
 def image_to_blob(image_path):
     """
@@ -26,10 +27,23 @@ def blob_to_gif(blob_data, output_image_path):
 
     return image
 
+def get_system_usage():
+    """
+    현재 CPU 및 메모리 사용량을 반환하는 함수
+    """
+    cpu_usage = psutil.cpu_percent(interval=None)  # 현재 CPU 사용량
+    memory_info = psutil.virtual_memory()  # 현재 메모리 정보
+    memory_usage = memory_info.percent  # 메모리 사용량 (퍼센트)
+    return cpu_usage, memory_usage
+
 # 테스트용 코드
 if __name__ == "__main__":
     # 입력 파일 리스트 (아이유1.gif, 아이유2.gif, ...)
     input_files = ['아이유1.gif', '아이유2.gif', '아이유3.gif', '아이유4.gif', '아이유5.gif']
+
+    # CPU 및 메모리 사용량 저장할 리스트
+    cpu_usages = []
+    memory_usages = []
     
     # 전체 프로세스 시간 측정 시작
     total_start_time = time.time()
@@ -49,7 +63,20 @@ if __name__ == "__main__":
         # 2. Blob -> 이미지 변환
         blob_to_gif(blob_data, output_image_path)
 
+        # 현재 CPU 및 메모리 사용량 측정
+        cpu_usage, memory_usage = get_system_usage()
+        cpu_usages.append(cpu_usage)
+        memory_usages.append(memory_usage)
+
     # 전체 프로세스 시간 측정 끝
     total_end_time = time.time()
     total_elapsed_time_ms = (total_end_time - total_start_time) * 1000
-    print(f"총 시간 : {total_elapsed_time_ms:.2f} ms")
+
+    # 평균 CPU 및 메모리 사용량 계산
+    avg_cpu_usage = sum(cpu_usages) / len(cpu_usages) if cpu_usages else 0
+    avg_memory_usage = sum(memory_usages) / len(memory_usages) if memory_usages else 0
+
+    # 결과 출력
+    print(f"총 시간: {total_elapsed_time_ms:.2f} ms")
+    print(f"평균 CPU 사용률: {avg_cpu_usage:.2f}%")
+    print(f"평균 메모리 사용률: {avg_memory_usage:.2f}%")
