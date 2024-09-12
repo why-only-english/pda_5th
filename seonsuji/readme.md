@@ -16,15 +16,13 @@ AWS EC2 인스턴스의 성능을 아키텍처(x86 vs ARM), 옵션, 인스턴스
 2.	인스턴스 크기 비교
 3.	옵션 비교
 
-<br>
 
-## Code Block   
 ### Model
-MNIST 데이터 셋을 이용하여 학습한 모델
+- 512개의 노드
+- 레이어 3개
 
 ### Data
-60000만장의 이미지를 28*28크기로 나눠 총 784의 입력
-극단적인 환경을 위해 512개 짜리 3개의 레이어를 두고 학습
+MNIST 데이터 셋 60000만장의 이미지를 28*28크기로 나눠 총 784의 입력
 
 ### Code block
 ```js
@@ -106,6 +104,7 @@ print('테스트 정확도:', test_acc)
 ### CPU 사용량 비교
 ![image](https://github.com/user-attachments/assets/1bba891f-0061-4193-8932-8b6accc7bb6f)
 
+![image](https://github.com/user-attachments/assets/5e7abdd5-ded0-4af9-9daf-a4c0266532e9)
 
 
 <br> 
