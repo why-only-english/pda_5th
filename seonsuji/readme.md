@@ -17,14 +17,14 @@ AWS EC2 인스턴스의 성능을 아키텍처(x86 vs ARM), 옵션, 인스턴스
 3.	옵션 비교
 
 
-### Model
+### 모델
 - 512개의 노드
 - 레이어 3개
 
-### Data
+### 데이터
 MNIST 데이터 셋 60000만장의 이미지를 28*28크기로 나눠 총 784의 입력
 
-### Code block
+### 코드
 ```js
 import tensorflow as tf
 import time  # 시간 측정을 위한 모듈
