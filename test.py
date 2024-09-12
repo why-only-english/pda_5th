@@ -86,7 +86,7 @@ primes = start(100000)
 디스크 쓰기 속도 비교 
 """
 file_path = "large_file.txt"
-large_text = "This is a test string.\n" * 100000000  # 대량의 문자열 생성
+large_text = "This is a test string.\n" * 10000000  # 대량의 문자열 생성
 
 start_time = time.time()
 
