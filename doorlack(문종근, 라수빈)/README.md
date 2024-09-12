@@ -2,7 +2,8 @@
 
 ## 1. N-Queen 문제란?
 - N-Queen 문제는 크기가 N × N인 체스판 위에 퀸 N개를 서로 공격할 수 없게 놓는 문제
-<img src="https://github.com/user-attachments/assets/6d9fbadf-93fc-4514-badd-00834c41d318" width="400"/>
+
+    <img src="https://github.com/user-attachments/assets/6d9fbadf-93fc-4514-badd-00834c41d318" width="400"/>
 
 ## 2. 사용 코드 
 ```python
@@ -66,8 +67,14 @@ print(f"CPU 시스템 모드 시간(sys): {sys_time:.6f} 초")
 
 ```
 
+## 3. 어떤 계열의 인스턴스가 효율적일까❓
+> 알고리즘 계산 시 주로 애플리케이션 레벨 CPU에서 계산 작업 한다! → 계산 작업에 용이한 **C 계열 인스턴스 사용이 유리하다는 가설을 세우고 C 계열과 다른 계열 인스턴스를 비교해보자 ❗** 
 
-## 3. 사용한 인스턴스 종류
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/8af1a319-2f7f-4607-bdd9-026dd61a4b33" width="400"/>
+</p>
+
+## 4. 사용한 인스턴스 종류
 | 인스턴스 종류 | t3.micro | t3.medium | t3.xlarge | t3.2xlarge |
 | --- | --- | --- | --- | --- |
 | vCPU | 2 | 2 | 4 | 8 |
@@ -76,23 +83,35 @@ print(f"CPU 시스템 모드 시간(sys): {sys_time:.6f} 초")
 
 | 인스턴스 종류 | c4.large | c4.xlarge | c4.4xlarge | c4.8xlarge |
 | --- | --- | --- | --- | --- |
-| vCPU | 2 | 2 | 4 | 8 |
+| vCPU | 2 | 8 | 16 | 36 |
 | 메모리(GiB) | 3.75 | 15 | 30 | 60 |
 | 시간당 요금(USD) | 0.10 | 0.398 | 0.796 | 1.591 |
 
-## 4. 사용자 모드 시간과 시스템 모드 시간
-- 사용자 모드(user): 프로그램이 애플리케이션 레벨에서 실행된 CPU 시간. 계산, 논리 실행 등 주로 사용자 코드에서 처리
+| 인스턴스 종류 | m5.xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge |
+| --- | --- | --- | --- | --- |
+| vCPU | 4 | 8 | 16 | 32 |
+| 메모리(GiB) | 16 | 32 | 64 | 128 |
+| 시간당 요금(USD) | 0.236 | 0.472 | 0.944 | 1.888 |
 
-- 시스템 모드(sys): 프로그램이 운영 체제 커널에서 실행된 CPU 시간
- 파일 I/O, 네트워크 통신, 메모리 관리와 같은 시스템 호출에서 처리된 시간
+## 5. 실행 결과
+### 인스턴스 유형별 실행 시간
+![image](https://github.com/user-attachments/assets/0b1b631d-e8e5-4de3-bbcc-dcdd124f1983)
 
-> 알고리즘 계산 시 주로 CPU에서 계산 작업 한다! → 계산 작업에 용이한 **C계열 인스턴스 사용이 유리하다는 것을 알 수 있음 !!**
+### 인스턴스 유형별 실행 시간당 요금 
+![image](https://github.com/user-attachments/assets/1c40a33d-b6ac-4c7c-a02a-97db5c447efe)
 
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/1c04b06b-360c-4789-a625-55f2da8307af" width="200"/>
-</p>
+### 세대에 따른 성능 및 금액 비교
+![image](https://github.com/user-attachments/assets/940e979d-e27d-4a5f-8c86-ab7e8ce6dfae)
 
->
-## 5. 결과 
-아는 것이 돈이다!
+## 6. 결과 
+| 인스턴스 종류 | c7i.8xlarge |
+| --- | --- |
+| vCPU | 32 |
+| 메모리(GiB) | 64 |
+| 시간당 요금(USD) | 1.6128 |
+| 실행 시간(s) | 12 |
+
+![image](https://github.com/user-attachments/assets/81886593-e538-44f9-a4ca-2dc047111429)
+
+아는 것이 돈이다! <<< 돈이 많은게 최고다!
 
