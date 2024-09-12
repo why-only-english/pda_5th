@@ -87,7 +87,26 @@ print('테스트 정확도:', test_acc)
 
 <br>
 
+## t2
+
+| 인스턴스 유형 | 학습 소요 시간(초) | CPU 사용량(%) | 
+| --- | --- | --- | 
+| t2.small | 50.73 | 18.05 |
+| t2.medium | 31.69 | 9.65 |
+| t2.large | 26.45 | 12.5 |
+| t2.xlarge | 19.43 | 6 |
+<br>
+
+
 ## x86 vs ARM   
+
+### 학습 소요 시간 비교
+![image](https://github.com/user-attachments/assets/09adf936-3a83-4993-97cb-09bbf42ec64d)
+
+### CPU 사용량 비교
+![image](https://github.com/user-attachments/assets/1bba891f-0061-4193-8932-8b6accc7bb6f)
+
+
 
 <br> 
 
