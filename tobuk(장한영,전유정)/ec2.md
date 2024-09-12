@@ -94,7 +94,7 @@ x86보다 왜 ARM이 성능이 좋을까? 생각해보았습니다.
 | 용도         | 범용 인스턴스                    | 범용 인스턴스                    |
 | 네트워크 성능 | 최대 5 Gbps (EBS 최적화 포함)   | 최대 5 Gbps (EBS 최적화 포함)   |
 
-<img src="https://github.com/user-attachments/assets/f173f2ba-696e-40e4-af90-7be0330be618" alt="Benchmark" width="800px" />
+<img src="https://github.com/user-attachments/assets/ba807302-bf57-4c66-830a-d2bd085dfd48" alt="Benchmark" width="800px" />
 
 
 ## 📈결과 분석
@@ -113,7 +113,7 @@ x86보다 왜 ARM이 성능이 좋을까? 생각해보았습니다.
 | 용도         | 범용 인스턴스                    | 범용 인스턴스                    |
 | 네트워크 성능 | 최대 5 Gbps (EBS 최적화 포함)   | 최대 10 Gbps (EBS 최적화 포함)  |
 
-<img src="https://github.com/user-attachments/assets/5178b44d-6eaa-4800-bc98-fed05041db86" alt="Benchmark" width="800px" />
+<img src="https://github.com/user-attachments/assets/332eef30-261a-4f5e-9ae7-f7416c6e291d" alt="Benchmark" width="800px" />
 
 
 ## 📈결과 분석
