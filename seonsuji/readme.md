@@ -93,8 +93,9 @@ print('테스트 정확도:', test_acc)
 | t2.medium | 31.69 | 9.65 |
 | t2.large | 26.45 | 12.5 |
 | t2.xlarge | 19.43 | 6 |
-<br>
 
+![image](https://github.com/user-attachments/assets/5e7abdd5-ded0-4af9-9daf-a4c0266532e9)
+<br>
 
 ## x86 vs ARM   
 
@@ -103,8 +104,6 @@ print('테스트 정확도:', test_acc)
 
 ### CPU 사용량 비교
 ![image](https://github.com/user-attachments/assets/1bba891f-0061-4193-8932-8b6accc7bb6f)
-
-![image](https://github.com/user-attachments/assets/5e7abdd5-ded0-4af9-9daf-a4c0266532e9)
 
 
 <br> 
@@ -119,20 +118,26 @@ print('테스트 정확도:', test_acc)
 c6gn.medium이 가장 빠른 학습 시간(95.95초)을 기록했고, c6g.medium과 c6gd.medium의 소요 시간은 거의 비슷했습니다.
 네트워크 성능이 강화된 c6gn 인스턴스가 소요 시간에 기여했음을 추측할 수 있습니다.
 ### CPU 사용량 
-c6gd,medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 보였고, c6g.medium과 c6gn.medium의 CPU 사용률은 유사했습니다.
+c6gd.medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 보였고, c6g.medium과 c6gn.medium의 CPU 사용률은 유사했습니다.
 고성능 스토리지를 가진 c6gd 인스턴스가 작업 중 CPU 부하를 적게 받았음을 추측할 수 있습니다.
+
 <br>
 
 ## 인스턴스 패밀리 비교
-![image](https://github.com/user-attachments/assets/7766d46a-32c6-49e9-ba67-cdeed5d1aade)
+![image](https://github.com/user-attachments/assets/0ed2c4f2-53c7-49a1-8b8f-cfaeaed7c9db)
 
 <br>
 
-![image](https://github.com/user-attachments/assets/633ec5a1-81d5-4861-a185-1b3ed064838f)
+![image](https://github.com/user-attachments/assets/b290b97e-1a4e-422e-90cb-11d3dd0e1dc1)
+
 
 ### 소요 시간
-
+t2.small이 43.04초로 c6g.medium의 104.15초보다 더 빠른 결과를 보였습니다.
+컴퓨팅 최적화 인스턴스인 c6g.medium이 우세할 것이라고 예상했으나, 머신 러닝 학습 작업은 CPU 성능뿐만 아니라 메모리 대역폭, 병렬 처리 능력, 리소스 관리 등의 역할도 중요하기 때문에 범용 인스턴스인 t2.small이 다양한 리소스를 효율적으로 사용하여 더 빠르게 학습 작업을 완료했다고 예상했습니다.
 ### CPU 사용량 
+c6g.medium이 23.2%, t2.small이 13.8%로 더 높았습니다.
+c6g.medium은 컴퓨팅 최적화 인스턴스로 더 많은 CPU 리소스를 사용해 작업을 처리하려 했지만 그만큼의 CPU 자원이 필요하지 않았을 수도 있습니다. 범용 인스턴스인 t2.small는 더 적은 CPU 자원을 사용하면서도 효율적으로 작업을 처리했음을 예측할 수 있습니다.
+<br>
 
 <br>
 
@@ -147,8 +152,12 @@ c6gd,medium이 다른 두 인스턴스에 비해 낮은 CPU 사용률(18.4%)을 
 
 ## 결론
 모델 학습을 위해 적합한 아키텍트는 Intel 이며, 원하는 비용과 속도에 맞추어 용량을 선택하는 것을 권장합니다. <br>
-만약, Arm 을 사용하고자 한다면 속도가 중요하다면 xlarge를 그렇지 않다면 small을 선택하는 것이 경제적일 것입니다.
-<br>
+만약, Arm 을 사용하고자 한다면 속도가 중요하다면 xlarge를 그렇지 않다면 small을 선택하는 것이 경제적일 것입니다. <br>
+소요 시간을 줄이고 싶다면 c6gn, CPU사용률을 줄이고 싶다면 c6gd를 사용하는 것이 유리합니다.
+또한 범용 인스턴스의 리소스 관리 방식이 머신 러닝 학습 작업에 더 적합할 수 있습니다.
+
+
+
 - 비용
   
 ![image](https://github.com/user-attachments/assets/608ce5fa-fca7-4655-91aa-baeffab8fabd)
