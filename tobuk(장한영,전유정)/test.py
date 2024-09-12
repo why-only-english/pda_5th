@@ -35,7 +35,7 @@ print(f"\n1000개의 종목에 대한 크롤링 시간: {average_time:.5f} 초")
 """
 # 1. 더 큰 파일 저장 작업
 file_path = "large_file.txt"
-large_text = "This is a test string.\n" * 100_000_000  # 훨씬 더 큰 대량의 문자열 생성 (약 2.4GB)
+large_text = "This is a test string.\n" * 10000000  # 훨씬 더 큰 대량의 문자열 생성 (약 2.4GB)
 
 # 파일에 대량의 문자열을 저장하는 시간 측정
 start_time = time.time()
